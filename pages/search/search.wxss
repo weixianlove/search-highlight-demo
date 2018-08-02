@@ -1,6 +1,10 @@
 /* pages/search/search.wxss */
+
 .search {
   margin: 50rpx;
   border: 1rpx solid #eee;
   padding: 20rpx;
+}
+.search-content-body {
+  margin: 50rpx;
 }

@@ -29,12 +29,8 @@ Page({
         return
       }
     wx.request({
-      url: 'https://gank.io/api/search/query/' + e.detail.value + '/category/all/count/10/page/1',
+      url: 'https://gank.io/api/search/query/' + value + '/category/all/count/10/page/1',
       data: '',
-      header: {},
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
       success: function (res) { 
         console.log(res)
         let searchData = res.data.results.map(function(res){
