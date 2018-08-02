@@ -1,0 +1,17 @@
+<view class="search">
+  <input focus='auto' bindinput="searchInputAction" placeholder="输入你要搜索的内容" />
+</view>
+
+<!-- 搜索时内容 -->
+<view wx:if="{{searchResultDatas.length > 0}}" class="search-content-body">
+  <block wx:for="{{searchResultDatas}}">
+    <view class="search-result-item">
+      <searchHighlightTextView 
+      class="result-item" 
+      datas='{{searchData[index]}}' 
+      bindtap="chooseSearchResultAction" 
+      data-id='{{item.ganhuo_id}}'
+       />
+    </view>
+  </block>
+</view>
