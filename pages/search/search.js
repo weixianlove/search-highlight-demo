@@ -28,8 +28,11 @@ Page({
         })
         return
       }
+
+  
+
     wx.request({
-      url: 'https://gank.io/api/search/query/' + value + '/category/all/count/10/page/1',
+      url: 'https://gank.io/api/search/query/' + encodeURIComponent(value) + '/category/all/count/10/page/1',
       data: '',
       success: function (res) { 
         console.log(res)
